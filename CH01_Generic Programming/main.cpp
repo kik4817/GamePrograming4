@@ -1,7 +1,5 @@
 /*
 * 작성일 : 2025-05-14
-* 작정사 : 김인국
-* 주 제 : 자료구조
 */
 
 /*
@@ -245,7 +243,7 @@ int main()
 	std::cout << "직접 만든 배열 클래스 예제" << std::endl;
 	Array<5, person> seoul;
 	seoul[0] = { 13, "BBB" };
-	seoul.at(1) = { 15, "CCC" };
+	seoul[1] = {15, "CCC"};
 
 	// 배열 코드 형태의 문법
 	std::cout << seoul.at(0).name << std::endl;

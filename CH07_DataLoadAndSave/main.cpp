@@ -28,7 +28,7 @@ int main()
 	data.LoadData("data.txt");
 
 	std::cout << "dataÀÇ level : " << data.level << " exp : " << data.exp << std::endl;
-	std::cout << "playerÀÇ level : " << player.level << " exp : " << player.exp << std::endl;
+	//std::cout << "playerÀÇ level : " << player.level << " exp : " << player.exp << std::endl;
 
 	//monster.Drop();
 	_getch();

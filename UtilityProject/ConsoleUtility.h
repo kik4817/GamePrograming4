@@ -7,6 +7,7 @@
 #include <string>
 #include <array>
 #include <vector>
+#include <chrono>
 
 using std::cout;
 using std::cin;
@@ -38,11 +39,18 @@ public:
 		CONSOLE_CURSOR_INFO c = { 0 };
 		c.dwSize = 1;
 		c.bVisible = visible;
+		SetConsoleCursorInfo(GetStdHandle(STD_OUTPUT_HANDLE), &c);
+	}
 
-		//HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
-		//CONSOLE_CURSOR_INFO cursorinfo;
-		//GetConsoleCursorInfo(hConsole, &cursorinfo);
-		//cursorinfo.bVisible = show;
-		//SetConsoleCursorInfo(hConsole, &cursorinfo);
+	static void TimeCheck(void (*Func)())
+	{
+		auto start = std::chrono::high_resolution_clock::now();
+
+		// 함수 포인터
+		Func();
+
+		auto end = std::chrono::high_resolution_clock::now();
+		std::chrono::duration<double, std::milli> duration = end - start;
+		std::cout << duration.count() << "ms시간이 걸렸습니다." << std::endl;
 	}
 };

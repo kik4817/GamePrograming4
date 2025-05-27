@@ -7,6 +7,8 @@
 #include <string>
 #include <array>
 #include <vector>
+#include <list>
+#include <deque>
 #include <chrono>
 
 using std::cout;

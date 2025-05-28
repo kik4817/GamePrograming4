@@ -10,6 +10,7 @@
 #include <list>
 #include <deque>
 #include <chrono>
+#include <algorithm>
 
 using std::cout;
 using std::cin;

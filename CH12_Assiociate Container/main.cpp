@@ -272,7 +272,7 @@ public:
 	void ShowItem()
 	{
 		std::cout << std::left;
-		std::cout << std::setw(10) <<"인덱스"
+		std::cout << std::setw(10) <<"| 인덱스"
 			<< std::setw(10) << "이름"
 			<< std::setw(10) << "공격력"
 			<< std::setw(10) << "가격"
@@ -281,7 +281,7 @@ public:
 		for (const auto& item : items)
 		{
 			std::cout << std::left; // 왼쪽으로 정렬
-			std::cout << std::setw(10) << item.first
+			std::cout << std::setw(10) << "|"<<item.first
 				<< std::setw(10) << item.second.name 
 				<< std::setw(10)<<item.second.ATK
 				<< std::setw(10)<<item.second.price
